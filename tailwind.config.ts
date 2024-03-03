@@ -26,6 +26,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        'model-one': "url('/assets/images/cards/modelone.png')",
+        'model-two': "url('/assets/images/cards/modeltwo.png')",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },

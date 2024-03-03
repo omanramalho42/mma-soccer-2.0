@@ -16,7 +16,8 @@ import {
   User,
   Newspaper,
   Trophy,
-  Handshake
+  Handshake,
+  VideoIcon
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -101,6 +102,12 @@ const SideNavbar = ({}: Props) => {
             title: "Profile",
             href: "/profile/details",
             icon: User,
+            variant: "ghost"
+          },
+          {
+            title: "Live",
+            href: "/live",
+            icon: VideoIcon,
             variant: "ghost"
           }
         ]}
