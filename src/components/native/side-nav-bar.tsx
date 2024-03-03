@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 
 import { useWindowWidth } from "@react-hook/window-size";
 import SideBarMenu from "./side-bar-menu";
+import ThemeSwitch from "./theme-switch";
 
 const SideNavbar = ({}: Props) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -35,7 +36,7 @@ const SideNavbar = ({}: Props) => {
   }
 
   return (
-    <div className="relative min-w-[80px] border-r px-3 bg-white pb-10 pt-24 ">
+    <div className="relative min-w-[80px] border-r px-3 pr-4 pb-10 pt-24">
       {!mobileWidth && (
         <div className="absolute right-[-20px] top-7">
           <Button
@@ -47,6 +48,7 @@ const SideNavbar = ({}: Props) => {
           </Button>
         </div>
       )}
+      
       <Nav
         isCollapsed={mobileWidth ? true : isCollapsed}
         links={[
@@ -112,6 +114,10 @@ const SideNavbar = ({}: Props) => {
           }
         ]}
       />
+
+      <div className="flex w-full justify-center items-center mt-5">
+        <ThemeSwitch />
+      </div>
     </div>
   );
 }

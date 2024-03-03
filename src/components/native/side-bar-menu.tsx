@@ -30,9 +30,9 @@ const SideBarMenu:React.FC = () => {
             {menu.map(({ icon, slug, title }, idx: number) => {
                 return (
                     <Link key={idx} href={`${slug}`}>
-                        <div className='flex bg-white dark:bg-black hover:bg-gray-200 transition-all p-2 flex-row items-center justify-start gap-2'>
+                        <div className='flex hover:bg-gray-200 transition-all p-2 flex-row items-center justify-start gap-2'>
                             { icon }
-                            <p className='bg-white dark:bg-black'>{title}</p>
+                            <p className=''>{title}</p>
                         </div>
                     </Link>
                 )

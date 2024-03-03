@@ -13,7 +13,7 @@ import { FormView } from "./form-view"
 
 export default function DataView () {
     return (
-        <Card className='mx-10 my-10 bg-white'>
+        <Card className='mx-10 my-10'>
             <CardHeader>
                 <div className="flex flex-row justify-between items-center">
                     <p className='text-black dark:text-white'>+ Create new invoice</p>
@@ -27,7 +27,7 @@ export default function DataView () {
                     </div>
                 </div>
             </CardHeader>
-            <CardContent className='flex bg-white mx-2 my-2 rounded-lg'>
+            <CardContent className='flex mx-2 my-2 rounded-lg'>
                 <FormView />
             </CardContent>
         </Card>

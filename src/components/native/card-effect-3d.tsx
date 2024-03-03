@@ -41,7 +41,7 @@ export function ThreeDCard() {
           <CardItem
             translateZ={20}
             as="button"
-            className="px-4 py-2 rounded-xl bg-white dark:bg-black text-black dark:text-white text-xs font-bold"
+            className="px-4 py-2 rounded-xl text-xs font-bold"
           >
             Sign up
           </CardItem>

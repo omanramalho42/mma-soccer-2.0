@@ -36,7 +36,7 @@ export function DataPicker({ label, control, name, errors }: DataPickerProps) {
             <Popover>
                 <PopoverTrigger 
                     asChild 
-                    className={`text-black bg-white hover:bg-white ${errors && "border border-red-500"}`} 
+                    className={` ${errors && "border border-red-500"}`} 
                 >
                     <Button
                         variant={"outline"}

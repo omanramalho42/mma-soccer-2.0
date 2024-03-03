@@ -13,6 +13,7 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { MeteorsCardEffect } from "@/components/native/meteor-card-effect";
+import { ContextMenu } from "@/components/ui/context-menu";
 
 export default function Page () {
   return (
@@ -23,7 +24,7 @@ export default function Page () {
           title={item.title}
           description={item.description}
           header={item.header}
-          className={cn("[&>p:text-lg] bg-white", item.className)}
+          className={cn("[&>p:text-lg]", item.className)}
           icon={item.icon}
         />
       ))}
@@ -31,7 +32,7 @@ export default function Page () {
   );
 }
 const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
+  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl  dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)] border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black"></div>
 );
 
 const SkeletonOne = () => {
@@ -66,6 +67,7 @@ const SkeletonOne = () => {
       whileHover="animate"
       className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
+      <ContextMenu />
       <motion.div
         variants={variants}
         className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
@@ -123,7 +125,7 @@ const SkeletonTwo = () => {
           style={{
             maxWidth: Math.random() * (100 - 40) + 40 + "%",
           }}
-          className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
+          className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
         ></motion.div>
       ))}
     </motion.div>
@@ -189,7 +191,7 @@ const SkeletonFour = () => {
     >
       <motion.div
         variants={first}
-        className="h-full bg-model-two sm:visible invisible bg-contain bg-no-repeat bg-center w-1/3 rounded-2xl bg-white p-4 dark:bg-black flex flex-col items-center text-center justify-center"
+        className="h-full bg-model-two sm:visible invisible bg-contain bg-no-repeat bg-center w-1/3 rounded-2xl p-4 flex flex-col items-center text-center justify-center"
       >
         <Image
           src="https://github.com/omanramalho42.png"
@@ -205,7 +207,7 @@ const SkeletonFour = () => {
           Jogador
         </p>
       </motion.div>
-      <motion.div className="h-full bg-model-one bg-contain bg-no-repeat sm:scale-[1] scale-[1.4] transition-all bg-center relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black  flex flex-col items-center justify-center">
+      <motion.div className="h-full bg-model-one bg-contain bg-no-repeat sm:scale-[1] scale-[1.4] transition-all bg-center relative z-20 w-1/3 rounded-2xl p-4 flex flex-col items-center justify-center">
         <Image
           src="https://github.com/omanramalho42.png"
           alt="avatar"
@@ -222,7 +224,7 @@ const SkeletonFour = () => {
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full bg-model-two sm:visible invisible bg-contain bg-no-repeat bg-center w-1/3 rounded-2xl bg-white p-4 dark:bg-black  flex flex-col items-center justify-center"
+        className="h-full bg-model-two sm:visible invisible bg-contain bg-no-repeat bg-center w-1/3 rounded-2xl p-4 flex flex-col items-center justify-center"
       >
         <Image
           src="https://github.com/omanramalho42.png"

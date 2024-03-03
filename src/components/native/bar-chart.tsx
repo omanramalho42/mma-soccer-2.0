@@ -1,5 +1,6 @@
 /** @format */
 "use client";
+import { useTheme } from "next-themes";
 import React from "react";
 import {
   BarChart as BarGraph,
@@ -63,6 +64,19 @@ const data = [
 ];
 
 export default function BarChart({}: Props) {
+  const { theme } = useTheme();
+  
+  const fill = 
+    theme === "light" 
+    ? "black" 
+    : theme === "dark" 
+    ? "white" 
+    : theme === "weed" 
+    ? "green" 
+    : theme === "choop" 
+    ? "orange" 
+    : "";
+
   return (
     <ResponsiveContainer width={"100%"} height={350}>
       <BarGraph data={data}>
@@ -80,7 +94,11 @@ export default function BarChart({}: Props) {
           fontSize={12}
           tickFormatter={(value) => `$${value}`}
         />
-        <Bar dataKey={"total"} radius={[4, 4, 0, 0]} />
+        <Bar 
+          fill={fill}
+          dataKey={"total"} 
+          radius={[4, 4, 0, 0]} 
+        />
       </BarGraph>
     </ResponsiveContainer>
   );

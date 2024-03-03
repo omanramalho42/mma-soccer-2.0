@@ -146,12 +146,12 @@ export function FormView() {
                                 errors={errors.currency}
                             />
                         </div>
-                        <Card className="bg-white">
+                        <Card className="">
                             <CardHeader className="flex flex-row w-full justify-between">
-                                <CardTitle className="text-black font-normal">My details</CardTitle>
+                                <CardTitle className="dark:text-white text-black font-normal">My details</CardTitle>
                                 <div className="flex flex-row-reverse gap-1 items-center justify-center">
                                     <p className="text-black dark:text-white">Edit</p>
-                                    <FilterIcon size={24} className="text-gray-700 cursor-pointer" />
+                                    <FilterIcon size={24} className="dark:text-gray-400 text-gray-700 cursor-pointer" />
                                 </div>
                             </CardHeader>
                             <CardContent className="flex flex-col gap-3">
@@ -160,17 +160,17 @@ export function FormView() {
                                         <AvatarImage src="https://github.com/omanramalho42.png" />
                                     </Avatar>
                                     <div className="flex flex-col">
-                                        <p className="text-gray-700">Oman Ramalho</p>
+                                        <p className="dark:text-gray-400 text-gray-700">Oman Ramalho</p>
                                         <p className="texd-gray-500">Omanapple42@hotmail.com</p>
                                     </div>
                                 </div>
 
                                 <div className="flex flex-col">
-                                    <p className="text-gray-700">Endereço</p>
+                                    <p className="dark:text-gray-400 text-gray-700">Endereço</p>
                                     <p className="texd-gray-500">Pedro gervásio Bernandes, 307</p>
                                 </div>
                                 <div className="flex flex-col">
-                                    <p className="text-gray-700">Número de telefone</p>
+                                    <p className="dark:text-gray-400 text-gray-700">Número de telefone</p>
                                     <p className="texd-gray-500">+55 85 98808-4345</p>
                                 </div>
                             </CardContent>
@@ -197,7 +197,7 @@ export function FormView() {
                         <div className="h-[1px] bg-gray-300 w-full my-5" />
                         
                         <div className="flex flex-col gap-2 w-full">
-                            <p className="text-gray-500">
+                            <p className="dark:text-gray-400 text-gray-500">
                                 Dates
                             </p>
                             <div className="flex xl:flex-row flex-col gap-3 justify-between">
@@ -215,7 +215,7 @@ export function FormView() {
                                 />
                             </div>
                         </div>
-                        <p className="text-black">Payament due date</p>
+                        <p className="dark:text-white text-black">Payament due date</p>
                         <div className="flex xl:flex-row flex-col gap-2 w-full">
                             {optionsDay.map(({ text }, idx) => {
                                 if(text === "+ Add customizado") {
@@ -226,7 +226,7 @@ export function FormView() {
                                                     <Button
                                                         key={idx}
                                                         type="button" 
-                                                        className={`bg-white text-black dark:text-white w-full ${selected === text && "bg-gray-200 border border-blue-500"}`}
+                                                        className={`w-full ${selected === text && "bg-gray-200 border border-blue-500"}`}
                                                         variant="outline"                                                    
                                                         name={text}
                                                         onClick={(event: any) => {
@@ -248,7 +248,7 @@ export function FormView() {
                                         <Button
                                             key={idx}
                                             type="button" 
-                                            className={`bg-white text-black dark:text-white w-full ${selected === text && "bg-gray-200 border border-blue-500"}`}
+                                            className={`w-full ${selected === text && "bg-gray-200 border border-blue-500"}`}
                                             name={text}
                                             variant="outline"
                                             onClick={(event: any) => {
@@ -271,7 +271,7 @@ export function FormView() {
                         <div className="h-[1px] bg-gray-300 w-full my-5" />
 
                         <div className="flex flex-col gap-2 w-full">
-                            <p className="text-gray-500">
+                            <p className="dark:text-gray-400 text-gray-500">
                                 Detalhes do cliente
                             </p>
                             <div className="flex flex-row gap-4">
@@ -296,7 +296,7 @@ export function FormView() {
                             </div>
                         </div>
 
-                        <p className="text-black">Payament due date</p>
+                        <p className="dark:text-white text-black">Payament due date</p>
                         <div className="flex xl:flex-row flex-col gap-2 w-full">
                             {optionsDay.map(({ text }, idx) => {
                                 if(text === "+ Add customizado") {
@@ -307,7 +307,7 @@ export function FormView() {
                                                     <Button
                                                         key={idx}
                                                         type="button" 
-                                                        className={`bg-white text-black dark:text-white w-full ${selectedPayment === text && "bg-gray-200 border border-blue-500"}`}
+                                                        className={`w-full ${selectedPayment === text && "bg-gray-200 border border-blue-500"}`}
                                                         name={text}
                                                         variant="outline"
                                                         onClick={(event: any) => {
@@ -329,7 +329,7 @@ export function FormView() {
                                         <Button
                                             key={idx}
                                             type="button" 
-                                            className={`bg-white text-black dark:text-white w-full ${selectedPayment === text && "bg-gray-200 border border-blue-500"}`}
+                                            className={`w-full ${selectedPayment === text && "bg-gray-200 border border-blue-500"}`}
                                             name={text}
                                             variant="outline"
                                             onClick={(event: any) => {
@@ -350,17 +350,16 @@ export function FormView() {
                         </div>
 
                     </div>
-                    <div className="w-full bg-white shadow-lg rounded-lg my-10 border-1">
-                        <DocumentoWord 
-                            contactInfo="teste"
-                            createdAt="12/06/2000"
-                            eletronicAsg="Oman"
-                            name="Omanzera"
-                            profession="saude em tata"
-                            invoice_id="#3232-3232-2323"
-                            tax_id="23123-321312"
-                        />
-                    </div>
+                    
+                    <DocumentoWord 
+                        contactInfo="teste"
+                        createdAt="12/06/2000"
+                        eletronicAsg="Oman"
+                        name="Omanzera"
+                        profession="saude em tata"
+                        invoice_id="#3232-3232-2323"
+                        tax_id="23123-321312"
+                    />
                 </div>
 
                 <CardFooter className="px-0">        

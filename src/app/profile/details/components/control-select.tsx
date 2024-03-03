@@ -59,7 +59,7 @@ const ControlSelect: React.FC<ControlSelectProps> = ({
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent 
-                  className="bg-white"
+                  className=""
                 >
                   {options.map(({ name, value }, index) => {
                     return (

@@ -1,3 +1,4 @@
+import { Card } from '@/components/ui/card';
 import React from 'react';
 
 interface DocumentWordProps {
@@ -12,7 +13,7 @@ interface DocumentWordProps {
 
 const DocumentoWord = ({ contactInfo, createdAt, eletronicAsg, name, profession, invoice_id, tax_id }: DocumentWordProps) => {
   return (
-    <div className="p-8">
+    <Card className="w-full shadow-lg rounded-lg my-10 border-1 p-8">
       <h1 className="text-2xl font-bold mb-4">Dominik Tyka</h1>
       <p>Product Designer, Fortaleza, Brasil</p>
       <div className="mb-4 flex gap-2">
@@ -22,10 +23,10 @@ const DocumentoWord = ({ contactInfo, createdAt, eletronicAsg, name, profession,
       <div className="mb-4">
         <div className='flex justify-start items-start m-auto gap-2'>
             <p className="font-semibold">Cliente:</p>
-            <p className='bg-gray-200 font-bold px-2'>{name}</p>
+            <p className='dark:bg-gray-800 bg-gray-200 font-bold px-2'>{name}</p>
         </div>
         <div>
-            <p className='text-gray-600 w-[8rem]'>Pedro gervásio Bernandes, Bom retiro, Joinville, Br</p>
+            <p className='dark:text-gray-400 text-gray-600 w-[8rem]'>Pedro gervásio Bernandes, Bom retiro, Joinville, Br</p>
             <div className='flex items-center justify-start flex-row gap-2'>
                 <p className="font-semibold">TAX ID:</p>
                 <p className='font-normal'>{tax_id}</p>
@@ -44,7 +45,7 @@ const DocumentoWord = ({ contactInfo, createdAt, eletronicAsg, name, profession,
         <p className="font-semibold">Assinatura Eletrônica:</p>
         <p>{eletronicAsg}</p>
       </div>
-    </div>
+    </Card>
   );
 };
 
