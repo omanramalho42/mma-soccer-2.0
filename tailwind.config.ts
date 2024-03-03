@@ -33,6 +33,7 @@ const config = {
         'symbol-team': "url('/assets/images/cards/mengao.png')",
         'symbol-team-two': "url('/assets/images/cards/gremio.png')",
         'symbol-team-tree': "url('/assets/images/cards/coringao.png')",
+        'field-game': "url('/assets/images/cards/field.png')",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],

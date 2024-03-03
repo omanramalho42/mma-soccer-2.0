@@ -17,12 +17,12 @@ import {
   Newspaper,
   Trophy,
   Handshake,
-  VideoIcon
+  VideoIcon,
+  Clock
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { useWindowWidth } from "@react-hook/window-size";
-import SideBarMenu from "./side-bar-menu";
 import ThemeSwitch from "./theme-switch";
 
 const SideNavbar = ({}: Props) => {
@@ -111,7 +111,13 @@ const SideNavbar = ({}: Props) => {
             href: "/live",
             icon: VideoIcon,
             variant: "ghost"
-          }
+          },
+          {
+            title: "Partida de Hoje",
+            href: "/table/field",
+            icon: Clock,
+            variant: "ghost"
+          },
         ]}
       />
 
