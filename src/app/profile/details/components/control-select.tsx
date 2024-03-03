@@ -48,18 +48,18 @@ const ControlSelect: React.FC<ControlSelectProps> = ({
         name={name}
         render={({ field }) => (
         <FormItem className='flex-1 w-full'>
-            <FormLabel className="text-white dark:text-white">{ label }</FormLabel>
+            <FormLabel className="text-black dark:text-white">{ label }</FormLabel>
             <Select 
               onValueChange={field.onChange} 
               defaultValue={field.value}
             >
                 <FormControl>
-                  <SelectTrigger className={`text-white ${errors && "border border-red-500"}`} >
+                  <SelectTrigger className={`text-black dark:text-white ${errors && "border border-red-500"}`} >
                     <SelectValue placeholder={placeholder} />
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent 
-                  className="bg-gray-700"
+                  className="bg-white"
                 >
                   {options.map(({ name, value }, index) => {
                     return (

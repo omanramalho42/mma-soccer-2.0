@@ -15,15 +15,15 @@ const DataView = () => {
         <ImagesSlider className="" images={images}>
             <motion.div
                 initial={{
-                opacity: 0,
-                y: -80,
+                    opacity: 0,
+                    y: -80,
                 }}
                 animate={{
-                opacity: 1,
-                y: 0,
+                    opacity: 1,
+                    y: 0,
                 }}
                 transition={{
-                duration: 0.6,
+                    duration: 0.6,
                 }}
                 className="z-50 flex flex-col justify-center items-center"
             >
@@ -31,7 +31,7 @@ const DataView = () => {
                 A maior plataforma de futset <br /> Do Mundo!
                 </motion.p>
                 <button 
-                    className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4"
+                    className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-black dark:text-white mx-auto text-center rounded-full relative mt-4"
                     onClick={() => {
                         router.push("/");
                     }}

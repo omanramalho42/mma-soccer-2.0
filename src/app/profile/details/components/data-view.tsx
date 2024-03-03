@@ -13,10 +13,10 @@ import { FormView } from "./form-view"
 
 export default function DataView () {
     return (
-        <Card className='mx-10 my-10 bg-gray-800'>
+        <Card className='mx-10 my-10 bg-white'>
             <CardHeader>
                 <div className="flex flex-row justify-between items-center">
-                    <p className='text-white'>+ Create new invoice</p>
+                    <p className='text-black dark:text-white'>+ Create new invoice</p>
                     <div className='flex flex-row-reverse gap-3'>
                         <Button className='bg-blue-500'>
                         + Create invoice
@@ -27,7 +27,7 @@ export default function DataView () {
                     </div>
                 </div>
             </CardHeader>
-            <CardContent className='flex bg-gray-900 mx-2 my-2 rounded-lg'>
+            <CardContent className='flex bg-white mx-2 my-2 rounded-lg'>
                 <FormView />
             </CardContent>
         </Card>

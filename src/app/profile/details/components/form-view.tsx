@@ -106,12 +106,11 @@ export function FormView() {
     } = form;
 
     function onSubmit(data: z.infer<typeof FormSchema>) {
-        console.log("data:", data);
         toast({
         title: "You submitted the following values:",
         description: (
             <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-            <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+            <code className="text-black dark:text-white">{JSON.stringify(data, null, 2)}</code>
             </pre>
         ),
         })
@@ -147,12 +146,12 @@ export function FormView() {
                                 errors={errors.currency}
                             />
                         </div>
-                        <Card className="bg-gray-900">
+                        <Card className="bg-white">
                             <CardHeader className="flex flex-row w-full justify-between">
-                                <CardTitle className="text-gray-600 font-normal">My details</CardTitle>
+                                <CardTitle className="text-black font-normal">My details</CardTitle>
                                 <div className="flex flex-row-reverse gap-1 items-center justify-center">
-                                    <p className="text-white">Edit</p>
-                                    <FilterIcon size={24} className="text-gray-100 cursor-pointer" />
+                                    <p className="text-black dark:text-white">Edit</p>
+                                    <FilterIcon size={24} className="text-gray-700 cursor-pointer" />
                                 </div>
                             </CardHeader>
                             <CardContent className="flex flex-col gap-3">
@@ -161,18 +160,18 @@ export function FormView() {
                                         <AvatarImage src="https://github.com/omanramalho42.png" />
                                     </Avatar>
                                     <div className="flex flex-col">
-                                        <p className="text-gray-500">Oman Ramalho</p>
-                                        <p className="text-gray-100">Omanapple42@hotmail.com</p>
+                                        <p className="text-gray-700">Oman Ramalho</p>
+                                        <p className="texd-gray-500">Omanapple42@hotmail.com</p>
                                     </div>
                                 </div>
 
                                 <div className="flex flex-col">
-                                    <p className="text-gray-500">Endereço</p>
-                                    <p className="text-gray-100">Pedro gervásio Bernandes, 307</p>
+                                    <p className="text-gray-700">Endereço</p>
+                                    <p className="texd-gray-500">Pedro gervásio Bernandes, 307</p>
                                 </div>
                                 <div className="flex flex-col">
-                                    <p className="text-gray-500">Número de telefone</p>
-                                    <p className="text-gray-100">+55 85 98808-4345</p>
+                                    <p className="text-gray-700">Número de telefone</p>
+                                    <p className="texd-gray-500">+55 85 98808-4345</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -198,7 +197,7 @@ export function FormView() {
                         <div className="h-[1px] bg-gray-300 w-full my-5" />
                         
                         <div className="flex flex-col gap-2 w-full">
-                            <p className="text-gray-100">
+                            <p className="text-gray-500">
                                 Dates
                             </p>
                             <div className="flex xl:flex-row flex-col gap-3 justify-between">
@@ -216,7 +215,7 @@ export function FormView() {
                                 />
                             </div>
                         </div>
-                        <p className="text-gray-600">Payament due date</p>
+                        <p className="text-black">Payament due date</p>
                         <div className="flex xl:flex-row flex-col gap-2 w-full">
                             {optionsDay.map(({ text }, idx) => {
                                 if(text === "+ Add customizado") {
@@ -227,7 +226,7 @@ export function FormView() {
                                                     <Button
                                                         key={idx}
                                                         type="button" 
-                                                        className={`bg-gray-900 text-white w-full ${selected === text && "bg-gray-800 border border-blue-500"}`}
+                                                        className={`bg-white text-black dark:text-white w-full ${selected === text && "bg-gray-200 border border-blue-500"}`}
                                                         variant="outline"                                                    
                                                         name={text}
                                                         onClick={(event: any) => {
@@ -249,7 +248,7 @@ export function FormView() {
                                         <Button
                                             key={idx}
                                             type="button" 
-                                            className={`bg-gray-900 text-white w-full ${selected === text && "bg-gray-800 border border-blue-500"}`}
+                                            className={`bg-white text-black dark:text-white w-full ${selected === text && "bg-gray-200 border border-blue-500"}`}
                                             name={text}
                                             variant="outline"
                                             onClick={(event: any) => {
@@ -272,7 +271,7 @@ export function FormView() {
                         <div className="h-[1px] bg-gray-300 w-full my-5" />
 
                         <div className="flex flex-col gap-2 w-full">
-                            <p className="text-gray-100">
+                            <p className="text-gray-500">
                                 Detalhes do cliente
                             </p>
                             <div className="flex flex-row gap-4">
@@ -297,7 +296,7 @@ export function FormView() {
                             </div>
                         </div>
 
-                        <p className="text-gray-600">Payament due date</p>
+                        <p className="text-black">Payament due date</p>
                         <div className="flex xl:flex-row flex-col gap-2 w-full">
                             {optionsDay.map(({ text }, idx) => {
                                 if(text === "+ Add customizado") {
@@ -308,7 +307,7 @@ export function FormView() {
                                                     <Button
                                                         key={idx}
                                                         type="button" 
-                                                        className={`bg-gray-900 text-white w-full ${selectedPayment === text && "bg-gray-800 border border-blue-500"}`}
+                                                        className={`bg-white text-black dark:text-white w-full ${selectedPayment === text && "bg-gray-200 border border-blue-500"}`}
                                                         name={text}
                                                         variant="outline"
                                                         onClick={(event: any) => {
@@ -330,7 +329,7 @@ export function FormView() {
                                         <Button
                                             key={idx}
                                             type="button" 
-                                            className={`bg-gray-900 text-white w-full ${selectedPayment === text && "bg-gray-800 border border-blue-500"}`}
+                                            className={`bg-white text-black dark:text-white w-full ${selectedPayment === text && "bg-gray-200 border border-blue-500"}`}
                                             name={text}
                                             variant="outline"
                                             onClick={(event: any) => {

@@ -21,7 +21,7 @@ export default function Page () {
           title={item.title}
           description={item.description}
           header={item.header}
-          className={cn("[&>p:text-lg] bg-gray-800", item.className)}
+          className={cn("[&>p:text-lg] bg-white", item.className)}
           icon={item.icon}
         />
       ))}

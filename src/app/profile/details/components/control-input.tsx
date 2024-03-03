@@ -38,9 +38,9 @@ const ControlInput: React.FC<ControlInputProps> = ({
         name={name}
         render={({ field }) => (
         <FormItem className='flex-1 w-full'>
-            <FormLabel className="text-white dark:text-white">{ label }</FormLabel>
+            <FormLabel className="text-black dark:text-white">{ label }</FormLabel>
             <Input 
-              className={`text-white ${errors && "border border-red-500"}`} 
+              className={`text-black dark:text-white ${errors && "border border-red-500"}`} 
               onChange={field.onChange} 
               defaultValue={field.value} 
             />
