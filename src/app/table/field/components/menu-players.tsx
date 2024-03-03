@@ -15,19 +15,30 @@ export const MenuPlayers = () => {
     event.dataTransfer.effectAllowed = 'move';
   };
 
+  const players = [
+    { name: "Oman" },
+    { name: "Fernando" },
+    { name: "Ricardo" },
+    { name: "Cleiton" },
+    { name: "Carioca" },
+  ]
+
   return (
     <aside>
         <div className="description">Adicione jogadores na partida de hoje.</div>
-        <div className="dndnode input" onDragStart={(event) => onDragStart(event, 'omanzera')} draggable>
-            Omanzera
-        </div>
-        <div className="dndnode" onDragStart={(event) => onDragStart(event, 'cabeção')} draggable>
-            Cabeção
-        </div>
-        <div className="dndnode output" onDragStart={(event) => onDragStart(event, 'cleiton')} draggable>
-            Cleiton
-        </div>
-        <div className='flex flex-row jsutify-center items-center'>
+        {players.map(({ name }) => {
+            return (
+                <div 
+                    key={name} 
+                    className="dndnode" 
+                    onDragStart={(event) => onDragStart(event, name)} 
+                    draggable
+                >
+                    { name }
+                </div>
+            )
+        })}
+        <div className='flex flex-row jsutify-center mt-6 items-center'>
             <AnimatedTooltip 
                 items={[
                     {

@@ -120,29 +120,34 @@ const DataView = () => {
   return (
     <div className="dndflow">
       <ReactFlowProvider>
-        <div className="reactflow-wrapper" ref={reactFlowWrapper}>
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            onConnect={onConnect}
-            onInit={setReactFlowInstance}
-            onDrop={onDrop}
-            onDragOver={onDragOver}
-            fitView
-            nodeTypes={nodeTypes}
-          >
-            <MiniMap 
-              style={minimapStyle} 
-              zoomable 
-              pannable 
-            />
-            <Controls />
-            <Background className='bg-field-game bg-no-repeat bg-contain w-full' color="#aaa" gap={16} />
-          </ReactFlow>
+        <div className='flex xl:flex-row flex-column w-full h-full'>
+          <div className="reactflow-wrapper" ref={reactFlowWrapper}>
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              onConnect={onConnect}
+              onInit={setReactFlowInstance}
+              onDrop={onDrop}
+              onDragOver={onDragOver}
+              fitView
+              nodeTypes={nodeTypes}
+            >
+              <MiniMap 
+                style={minimapStyle} 
+                zoomable 
+                pannable 
+              />
+              <Controls />
+              <Background className='bg-field-game bg-no-repeat bg-contain w-full' color="#aaa" gap={16} />
+            </ReactFlow>
+          </div>
+          <div className=''>
+            <MenuPlayers />
+          </div>
         </div>
-        <MenuPlayers />
+
       </ReactFlowProvider>
     </div>
 
