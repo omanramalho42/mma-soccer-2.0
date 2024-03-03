@@ -29,6 +29,7 @@ const config = {
       backgroundImage: {
         'model-one': "url('/assets/images/cards/modelone.png')",
         'model-two': "url('/assets/images/cards/modeltwo.png')",
+        'tooltip-card': "url('/assets/images/cards/tooltip-card.png')",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
