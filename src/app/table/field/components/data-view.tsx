@@ -77,7 +77,7 @@ const DataView = () => {
   const getId = () => `dndnode_${id++}`;
 
   const reactFlowWrapper = useRef<any>(null);
-  const [reactFlowInstance, setReactFlowInstance] = useState(null);
+  const [reactFlowInstance, setReactFlowInstance] = useState<any>(null);
   const onDrop = useCallback(
     (event: any) => {
       event.preventDefault();
@@ -88,7 +88,7 @@ const DataView = () => {
         return;
       }
 
-      const position = reactFlowInstance.screenToFlowPosition({
+      const position = reactFlowInstance?.screenToFlowPosition({
         x: event.clientX,
         y: event.clientY,
       });
