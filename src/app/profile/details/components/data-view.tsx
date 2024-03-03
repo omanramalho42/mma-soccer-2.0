@@ -16,7 +16,7 @@ export default function DataView () {
         <Card className='mx-10 my-10'>
             <CardHeader>
                 <div className="flex flex-row justify-between items-center">
-                    <p className='text-black dark:text-white'>+ Create new invoice</p>
+                    <p className=''>+ Create new invoice</p>
                     <div className='flex flex-row-reverse gap-3'>
                         <Button className='bg-blue-500'>
                         + Create invoice

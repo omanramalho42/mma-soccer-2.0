@@ -110,7 +110,7 @@ export function FormView() {
         title: "You submitted the following values:",
         description: (
             <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-            <code className="text-black dark:text-white">{JSON.stringify(data, null, 2)}</code>
+            <code className="">{JSON.stringify(data, null, 2)}</code>
             </pre>
         ),
         })
@@ -148,9 +148,9 @@ export function FormView() {
                         </div>
                         <Card className="">
                             <CardHeader className="flex flex-row w-full justify-between">
-                                <CardTitle className="dark:text-white text-black font-normal">My details</CardTitle>
+                                <CardTitle className=" font-normal">My details</CardTitle>
                                 <div className="flex flex-row-reverse gap-1 items-center justify-center">
-                                    <p className="text-black dark:text-white">Edit</p>
+                                    <p className="">Edit</p>
                                     <FilterIcon size={24} className="dark:text-gray-400 text-gray-700 cursor-pointer" />
                                 </div>
                             </CardHeader>
@@ -215,7 +215,7 @@ export function FormView() {
                                 />
                             </div>
                         </div>
-                        <p className="dark:text-white text-black">Payament due date</p>
+                        <p className="">Payament due date</p>
                         <div className="flex xl:flex-row flex-col gap-2 w-full">
                             {optionsDay.map(({ text }, idx) => {
                                 if(text === "+ Add customizado") {
@@ -296,7 +296,7 @@ export function FormView() {
                             </div>
                         </div>
 
-                        <p className="dark:text-white text-black">Payament due date</p>
+                        <p className="">Payament due date</p>
                         <div className="flex xl:flex-row flex-col gap-2 w-full">
                             {optionsDay.map(({ text }, idx) => {
                                 if(text === "+ Add customizado") {
