@@ -30,6 +30,9 @@ const config = {
         'model-one': "url('/assets/images/cards/modelone.png')",
         'model-two': "url('/assets/images/cards/modeltwo.png')",
         'tooltip-card': "url('/assets/images/cards/tooltip-card.png')",
+        'symbol-team': "url('/assets/images/cards/mengao.png')",
+        'symbol-team-two': "url('/assets/images/cards/gremio.png')",
+        'symbol-team-tree': "url('/assets/images/cards/coringao.png')",
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
